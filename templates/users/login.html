@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>Login To AutoSar System</title>
+
+    <style>
+        body {
+            background-color: honeydew;
+            font-family: Helvetica;
+
+        }
+
+        h5 {
+            text-align: center;
+            margin-top: 150px;
+            font-weight: bold;
+        }
+
+
+        input {
+            margin: 16px;
+            height: 50px;
+            width: 200px;
+            border-radius: 5px;
+            border-color: silver;
+            display: block;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #submit {
+            border: none;
+            background-color: lightseagreen;
+            color: whitesmoke;
+            font-weight: bold;
+            border-radius: 5px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h5>Login to AutoSar System</h5>
+    <div class="main">
+
+
+        <form class="form1" method="POST">
+            {% csrf_token %}
+            <input type="username" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <input id="submit" type="submit" name="userlogin" value="Login">
+        </form>
+
+    </div>
+</body>
+
+</html>
